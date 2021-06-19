@@ -1,0 +1,19 @@
+@use './breakpoints' as *;
+
+@mixin flex($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin phone {
+    @media (min-width: 0) and (max-width: #{$breakpoint-sm}) {
+        @content;
+    } 
+}
+
+@mixin desktop {
+    @media (min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-xl}) {
+        @content;
+    } 
+}
