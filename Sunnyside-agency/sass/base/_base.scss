@@ -10,13 +10,28 @@ body {
     font-weight: 600;
 }
 
-h1 {
+h1,
+h2 {
     font-family: var(--ff-secondary);
+    font-weight: 900;
+}
+
+h1 {
     font-size: var(--fz-800);
     @include desktop {
         font-size: var(--fz-900);
     }
-    font-weight: 900;
+}
+
+h2 {
+    font-size: var(--fz-700);
+    @include desktop {
+        font-size: var(--fz-800);
+    }
+}
+
+p {
+    color: var(--clr-blue-200);
 }
 
 .container {

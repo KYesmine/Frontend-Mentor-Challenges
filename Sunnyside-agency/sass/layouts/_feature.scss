@@ -1,0 +1,40 @@
+@use '../abstracts/mixins' as *;
+
+
+.feature {
+    @include desktop {
+        display: flex
+    }
+}
+
+.feature__img {
+    @include desktop {
+        width: 50%;
+    }
+}
+
+
+.feature__content {
+    @include flex;
+    flex-direction: column;
+    padding: 3em 1em;
+    text-align: center;
+
+    @include desktop {
+        @include flex($align: flex-start);
+        order: -1;
+        text-align: left;
+        padding: 6em;
+        width: 50%;
+    }
+
+    & > * + * {
+        margin-top: 1.5em;
+    }
+}
+
+.audience {
+    .feature__content {
+        order: 2;
+    }
+}

@@ -16,7 +16,9 @@ button,
 }
 
 button:hover,
-.btn:hover {
+button:focus,
+.btn:hover,
+.btn:focus {
     color: var(--clr-white-100);
     background-color: rgba(#FFF, .4);
 }
@@ -27,10 +29,12 @@ button:hover,
     background: none;
 }
 
-.btn--toggler:hover {
+.btn--toggler:hover,
+.btn--toggler:focus {
     background: none;
 }
 
-.btn--toggler:hover .icon-hamburger {
+.btn--toggler:hover .icon-hamburger,
+.btn--toggler:focus .icon-hamburger  {
     fill: rgba(#FFF, .4)
 } 
