@@ -101,6 +101,10 @@
             color: var(--clr-blue-700);
         }
 
+        .btn:hover {
+            background-color: rgba(#FFF, .4);
+        }
+
         .nav__menu {
             flex-direction: row;
         }
@@ -121,7 +125,7 @@
     flex-direction: column;
     margin: 3em 0;
     text-align: center;
-    margin-top: 3em;
+    margin-top: 7em;
 
     .header__title {
         margin-bottom: 1.5em;
