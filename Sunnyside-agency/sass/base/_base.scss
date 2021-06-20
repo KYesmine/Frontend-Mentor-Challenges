@@ -11,7 +11,9 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
     font-family: var(--ff-secondary);
     font-weight: 900;
 }
@@ -30,8 +32,21 @@ h2 {
     }
 }
 
+h3 {
+    font-size: var(--fz-600);
+}
+
+h4 {
+    font-size: var(--fz-300);
+    @include desktop {
+        font-size: var(--fz-500);
+    }
+}
+
 p {
     color: var(--clr-blue-200);
+    letter-spacing: -0.13px;
+    line-height: 1.6875rem;
 }
 
 .container {
