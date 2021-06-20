@@ -413,6 +413,11 @@ button:focus,
   height: 100%;
   object-fit: cover;
 }
+@media (min-width: 960px) and (max-width: 1920px) {
+  .feature .feature__content-img img {
+    width: 100%;
+  }
+}
 .feature .content-img__texts {
   position: absolute;
   top: 75%;
@@ -444,7 +449,7 @@ button:focus,
 }
 @media (min-width: 960px) and (max-width: 1920px) {
   .testimonials {
-    padding: 5em 3em;
+    padding: 8em;
   }
 }
 .testimonials p {
@@ -465,29 +470,41 @@ button:focus,
   width: 72px;
 }
 .testimonials .testimonials__items {
-  margin-top: 3em;
+  margin-top: 2em;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   flex-direction: column;
 }
-@media (min-width: 960px) and (max-width: 1920px) {
+@media (min-width: 700px) and (max-width: 1920px) {
   .testimonials .testimonials__items {
     flex-direction: row;
+  }
+}
+@media (min-width: 1500px) and (max-width: 1920px) {
+  .testimonials .testimonials__items {
+    width: 80%;
   }
 }
 .testimonials .testimonials__item {
   margin: 1.5em 0;
 }
+@media (min-width: 700px) and (max-width: 1920px) {
+  .testimonials .testimonials__item {
+    width: 25%;
+  }
+}
 .testimonials .testimonials__item > * + * {
   margin-top: 1.5em;
 }
+.testimonials .testimonial__content {
+  max-width: 450px;
+}
 @media (min-width: 960px) and (max-width: 1920px) {
-  .testimonials .testimonials__item {
-    margin-top: 0;
-  }
-  .testimonials .testimonials__item > * + * {
-    margin-left: 1.5em;
+  .testimonials .testimonial__content {
+    max-width: max-content;
   }
 }
 .testimonials .author__name {
@@ -499,6 +516,24 @@ button:focus,
   color: var(--clr-blue-100);
   font-size: var(--fz-100);
   margin-top: 0.5em;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.gallery .gallery__img {
+  width: 50%;
+}
+@media (min-width: 960px) and (max-width: 1920px) {
+  .gallery {
+    flex-wrap: nowrap;
+  }
+  .gallery .gallery__img {
+    flex: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

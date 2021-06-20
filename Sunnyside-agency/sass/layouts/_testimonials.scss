@@ -1,4 +1,5 @@
 @use '../abstracts/mixins' as *;
+@use '../abstracts/breakpoints' as *;
 
 
 .testimonials {
@@ -6,7 +7,7 @@
     padding: 3em 1em;
 
     @include medium {
-        padding: 5em 3em;
+        padding: 8em;
     }
 
     p {
@@ -29,27 +30,38 @@
     }
 
     .testimonials__items {
-        margin-top: 3em;
-        @include flex;
+        margin-top: 2em;
+        @include flex($justify: space-between);
+        margin-left: auto;
+        margin-right: auto;
         flex-direction: column;
 
-        @include medium {
+        @include media(700px, $breakpoint-xl) {
             flex-direction: row;
+        }
+
+        @include media(1500px, $breakpoint-xl) {
+            width: 80%;
         }
     }
 
     .testimonials__item {
         margin: 1.5em 0;
 
+        @include media(700px, $breakpoint-xl) {
+            width: 25%;
+        }
+        
         & > * + * {
             margin-top: 1.5em;
         }
+    }
+
+    .testimonial__content {
+        max-width: 450px;
 
         @include medium {
-            margin-top: 0;
-            & > * + * {
-                margin-left: 1.5em;
-            }
+            max-width: max-content;
         }
     }
 
